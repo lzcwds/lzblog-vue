@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="lz_main">
     </div>
 </template>
 
