@@ -85,7 +85,7 @@ export default {
                 }
                 li:hover{
                     cursor: pointer;
-                    color: blue;
+                    color: #409EFF;
                 }
             }
         }
