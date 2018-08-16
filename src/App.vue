@@ -22,12 +22,21 @@
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
   }
-  .lz_main {
-    position: absolute;
-    right: 0;
-    left: 300px;
-    background: #eaeaea;
-    width: auto;
-    min-height: 100%;
+  @media screen and (min-width: 900px) {
+    .lz_main {
+      position: absolute;
+      right: 0;
+      left: 300px;
+      background: #eaeaea;
+      width: auto;
+      min-height: 100%;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .lz_main {
+      background: #eaeaea;
+      width: auto;
+      min-height: 100%;
+    }
   }
 </style>

@@ -62,9 +62,9 @@ export default {
   .blog-list{
     width: 95%;
     margin: 0 auto;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
     .blog{
-      margin-top: 30px;
+      padding-top: 30px;
 
       .blog-title{
         color:#696969;
