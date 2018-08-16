@@ -5,7 +5,9 @@
         <el-card>
           <header>
             <div class="blog-title">{{item.title}}</div>
-            <div class="blog-date"></div>
+            <div class="blog-date"><div>
+
+            </div></div>
           </header>
           <div class="blog-content">
             {{item.content}}
@@ -33,7 +35,7 @@ import ElTag from '../../node_modules/element-ui/packages/tag/src/tag.vue'
 
 export default {
   components: {ElTag},
-  name: 'HelloWorld',
+  name: 'list',
   data () {
     return {
       blogList: [{
@@ -42,6 +44,10 @@ export default {
         tags:['游记','java']
       },{
         title:'这是标题2',
+        content:'这是内容',
+        tags:['游记','java']
+      },{
+        title:'这是标题3',
         content:'这是内容',
         tags:['游记','java']
       }]
@@ -56,7 +62,7 @@ export default {
   .blog-list{
     width: 95%;
     margin: 0 auto;
-
+    margin-bottom: 30px;
     .blog{
       margin-top: 30px;
 

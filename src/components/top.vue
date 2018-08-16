@@ -8,10 +8,11 @@
             <div class="author">
                 <h1>lzcwds</h1>
             </div>
-            <div class="signature"></div>
+            <div class="signature">Talk is cheap. Show me the code.</div>
             <nav class="header-menu">
                 <ul>
-                    <li>主页</li>
+                    <li @click="toHome">主页</li>
+                    <li>/</li>
                     <li>相册</li>
                 </ul>
             </nav>
@@ -30,6 +31,11 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods:{
+    toHome:function (){
+      this.$router.push('/');
     }
   }
 }
@@ -67,8 +73,21 @@ export default {
             color:#696969;
             text-align: center;
         }
+        .signature{
+            color: #aaaaaa;
+        }
         .header-menu{
-
+            margin-top: 50px;
+            ul{
+                li{
+                    display:inline;
+                    color: #999;
+                }
+                li:hover{
+                    cursor: pointer;
+                    color: blue;
+                }
+            }
         }
     }
 </style>

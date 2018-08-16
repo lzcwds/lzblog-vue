@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import content from '@/components/content'
+import list from '@/components/list'
 import article from '@/components/article'
 Vue.use(Router)
 
@@ -8,8 +8,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'content',
-      component: content
+      name: 'list',
+      component: list
     },{
       path: '/article',
       name: 'article',
