@@ -11,8 +11,8 @@ export default new Router({
       name: 'list',
       component: list
     },{
-      path: '/article',
-      name: 'article',
+      path: '/article/:id',
+      name: 'ElArticle',
       component: article
     }
   ]

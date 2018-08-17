@@ -1,7 +1,7 @@
 <template>
   <div class="lz_main">
     <div class="blog-list">
-      <div v-for="item in blogList" class="blog">
+      <div v-for="(item,index) in blogList" class="blog">
         <el-card>
           <header>
             <div class="blog-title">{{item.title}}</div>
@@ -11,15 +11,15 @@
           </header>
           <div class="blog-content">
             {{item.content}}
-            <a class="more" href="#/article">more >></a>
+            <a class="more" @click="toArticle">more >></a>
           </div>
           <div class="blog-footer clearfix">
             <div class="blog-tab">
-              <el-tag  v-for="tag in item.tags">
-                {{tag}}
+              <el-tag>
+                {{item.tag.name}}
               </el-tag>
             </div>
-            <a class="to-article" href="#/article">展开全文 >></a>
+            <a class="to-article" @click="toArticle(index)">展开全文 >></a>
           </div>
         </el-card>
       </div>
@@ -32,28 +32,28 @@
 
 <script>
 import ElTag from '../../node_modules/element-ui/packages/tag/src/tag.vue'
-
+import api from './ajax/api'
 export default {
   components: {ElTag},
   name: 'list',
   data () {
     return {
-      blogList: [{
-        title:'这是标题',
-        content:'这是内容',
-        tags:['游记','java']
-      },{
-        title:'这是标题2',
-        content:'这是内容',
-        tags:['游记','java']
-      },{
-        title:'这是标题3',
-        content:'这是内容',
-        tags:['游记','java']
-      }]
+      blogList: []
     }
+  },
+  mounted(){
+    let that =this;
+    api.getlist().then(function (resp) {
+      that.blogList = resp;
 
+    });
+  },
+  methods:{
+    toArticle:function(i) {
+      this.$router.push({name:'ElArticle',params:{id:this.blogList[i].id}});
+    }
   }
+
 }
 </script>
 
@@ -80,7 +80,12 @@ export default {
           display:block;
           width: 70px;
           margin: 15px 0;
+          cursor: pointer;
         }
+        .more:hover{
+          color:#409EFF;
+        }
+
       }
 
       .blog-footer{
@@ -101,6 +106,10 @@ export default {
           padding: 10px;
           line-height: 19px;
           border-radius: 2px;
+          cursor: pointer;
+        }
+        .to-article:hover{
+          color: #409EFF;
         }
       }
     }

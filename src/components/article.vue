@@ -2,7 +2,16 @@
     <div class="lz_main">
         <div class="blog-content">
             <el-card>
-
+                <header>
+                    <div class="blog-title">{{curblog.title }}</div>
+                    <div class="blog-date"><div>
+                    </div></div>
+                </header>
+                <div class="blog-content">
+                    {{curblog.content }}
+                </div>
+                <div class="blog-footer clearfix">
+                </div>
             </el-card>
         </div>
     </div>
@@ -10,12 +19,19 @@
 
 <script>
   import ElTag from '../../node_modules/element-ui/packages/tag/src/tag.vue'
+  import api from './ajax/api'
   export default {
-    name: 'Article',
+    name: 'ElArticle',
     data () {
       return {
-        msg: 'Welcome to Your Vue.js App'
+        curblog:{}
       }
+    },
+    mounted(){
+      let that = this;
+      api.getById(this.$route.params).then(function (resp) {
+        that.curblog = resp[0];
+      })
     }
   }
 </script>

@@ -4,8 +4,7 @@
  */
 import api from './ajax'
 
-const API = {
+export default {
   getlist:()=>(api.get(`/article/getlist`)),
+  getById:(data={}) =>(api.get(`/article/getbyid?id=${data.id}`))
 }
-
-export default API;

@@ -4,11 +4,10 @@
  */
 
 import axios from 'axios'
-import url from 'url'
+import url from './url'
 
 let axiosIns=axios.create({});
-axiosIns.defaults.baseURL = url.server;
-
+axiosIns.defaults.baseURL =url.server;
 
 let ajaxMethod = ['get', 'post','delete','put'];
 let api={};
@@ -18,7 +17,7 @@ ajaxMethod.forEach((method)=> {
   api[method] = function (uri, data) {
     return new Promise(function (resolve, reject) {
       axiosIns[method](uri, data).then((response)=> {
-        if(response.data.message=="Success"){
+        if(response.data.msg=="success"){
           resolve(response.data.data);
         }else{
           reject(response.data.returnMsg);
