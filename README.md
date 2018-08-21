@@ -1,13 +1,15 @@
-# lzblog-vue
+### lzblog-vue
 
-### 开发中。。。。
+#### 开发中。。。。
 
-### 开发计划：
-    博客系统：vue版lzblog-vue
-    博客后台：
-    博客后端:[lzblog-server](/example/profile.md)
+#### 配套系统：
+ 博客系统：vue版lzblog-vue  
+ 博客后台：  
+ 博客后端：[lzblog-server](/example/profile.md)
+
+#### 已实现功能：
+- [x] lzblog-vue前台基本功能已经实现
+- [x] 接口已对接
 
 
-目前已经做好静态页面的搭建和移动端的简单适应
-
-  ### 本仓库无任何商业目的！如果有侵权行为，请联系我！请不要把我抓走！
+#### 本仓库无任何商业目的！如果有侵权行为，请联系我！请不要把我抓走！
