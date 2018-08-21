@@ -1,11 +1,11 @@
-### lzblog-vue
+## lzblog-vue
 
 #### 开发中。。。。
 
 #### 配套系统：
  博客系统：vue版lzblog-vue  
  博客后台：  
- 博客后端：[lzblog-server](/example/profile.md)
+ 博客后端：[lzblog-server](https://github.com/lzcwds/lzblog-server)
 
 #### 已实现功能：
 - [x] lzblog-vue前台基本功能已经实现
