@@ -11,6 +11,7 @@
                     {{curblog.content }}
                 </div>
                 <div class="blog-footer clearfix">
+                    {{count}}
                 </div>
             </el-card>
         </div>
@@ -19,12 +20,13 @@
 
 <script>
   import ElTag from '../../node_modules/element-ui/packages/tag/src/tag.vue'
-  import api from './ajax/api'
+  import api from '../api'
   export default {
     name: 'ElArticle',
     data () {
       return {
-        curblog:{}
+        curblog:{},
+        count:this.$store.state.count
       }
     },
     mounted(){

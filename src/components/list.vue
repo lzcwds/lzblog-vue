@@ -32,7 +32,7 @@
 
 <script>
 import ElTag from '../../node_modules/element-ui/packages/tag/src/tag.vue'
-import api from './ajax/api'
+import api from '../api'
 export default {
   components: {ElTag},
   name: 'list',

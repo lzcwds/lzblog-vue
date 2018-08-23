@@ -8,7 +8,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex);
 
 const state ={
-  blogList:[],
+  count:1
 }
 
 export default new Vuex.Store({
