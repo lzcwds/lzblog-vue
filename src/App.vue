@@ -6,12 +6,12 @@
 </template>
 
 <script>
-  import Top from './components/top.vue'
+import Top from './components/top.vue'
 
-  export default {
-    components: {Top},
-    name: 'App'
-  }
+export default {
+  components: {Top},
+  name: 'App'
+}
 </script>
 
 <style>
