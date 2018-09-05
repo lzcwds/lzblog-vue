@@ -10,8 +10,10 @@
             </div></div>
           </header>
           <div class="blog-content">
-            {{item.content}}
-            <a class="more" @click="toArticle">more >></a>
+            <div v-html="item.content">
+
+            </div>
+            <a class="more" @click="toArticle(index)">more >></a>
           </div>
           <div class="blog-footer clearfix">
             <div class="blog-tab">

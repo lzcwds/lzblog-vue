@@ -7,8 +7,7 @@
                     <div class="blog-date"><div>
                     </div></div>
                 </header>
-                <div class="blog-content">
-                    {{curblog.content }}
+                <div class="blog-content" v-html="curblog.content">
                 </div>
                 <div class="blog-footer clearfix">
                     {{count}}
